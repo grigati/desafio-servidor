@@ -1,0 +1,38 @@
+#############################################
+#  Exclusao de arquivos específicos de IDE  #
+#############################################
+
+#
+# Exclusoes padrao
+#
+
+tomcat
+
+# Exclusao de Binarios
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+*.war
+*.ear
+*.sar
+*.class
+
+# Exclusoes para Maven 
+target/
+
+# Exclusoes para IDE - IntelliJ  
+*.iml
+*.iws
+*.ipr
+.idea/
+
+# Exclusoes para IDE - Eclipse
+.settings/
+.classpath
+.project
+
