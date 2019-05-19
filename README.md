@@ -22,14 +22,14 @@ INSERT INTO `tb_usuario_tb_telefone` VALUES (1,1),(1,2),(2,3),(2,4);
 
 Para rodar o projeto:
 
-mvn spring-boot:run
+`mvn spring-boot:run`
 
 Para acessar o sistema, use os seguintes dados:
 
 - Usuário admin
-CPF: 12345678910
-senha: 123456
+  - CPF: 12345678910
+  - senha: 123456
 
-Usuário comum:
-CPF: 79293996307
-senha: 123456
+- Usuário comum:
+  - CPF: 79293996307
+  - senha: 123456
