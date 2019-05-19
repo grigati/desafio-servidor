@@ -1,5 +1,6 @@
 package app.crud.controller;
 
+import org.springframework.security.crypto.password.PasswordEncoder;
 import java.util.Date;
 import java.util.Set;
 import java.util.HashSet;
@@ -25,6 +26,9 @@ public class ControllerRestUsuario {
 
     @Autowired
     RepositoryOperacao repositoryOperacao;
+
+    @Autowired
+    PasswordEncoder passwordEncoder;
 
     // Busca o usuário autenticado
     @GetMapping("/usuario")
@@ -72,6 +76,9 @@ public class ControllerRestUsuario {
       });
       usuario.setCep(usuario.getCep().replaceAll("\\D", ""));
 
+      // Criptografa senha
+      usuario.setSenha(passwordEncoder.encode(usuario.getSenha()));
+
       Usuario usuarioCadastrado = repositoryUsuario.save(usuario);
 
       // Adiciona a operação no banco de dados
@@ -111,6 +118,9 @@ public class ControllerRestUsuario {
         telefone.setTelefone(telSemMascara);
       });
       usuario.setCep(usuario.getCep().replaceAll("\\D", ""));
+
+      // Criptografa senha
+      usuario.setSenha(passwordEncoder.encode(usuario.getSenha()));
 
       Usuario usuarioCadastrado = repositoryUsuario.save(usuario);
 
