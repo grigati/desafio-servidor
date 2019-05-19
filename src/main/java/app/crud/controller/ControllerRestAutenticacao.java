@@ -1,12 +1,6 @@
 package app.crud.controller;
 
 import org.springframework.security.crypto.password.PasswordEncoder;
-import java.net.URI;
-import java.util.Collections;
-import app.crud.model.RoleName;
-import app.crud.model.Role;
-import app.crud.payload.SolicitacaoCadastro;
-import app.crud.model.Usuario;
 import app.crud.payload.ResponseAutenticacao;
 import app.crud.payload.SolicitacaoLogin;
 import app.crud.repository.RepositoryUsuario;
