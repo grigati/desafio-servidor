@@ -41,7 +41,7 @@ public class ControllerRestAutenticacao {
     public ResponseEntity<?> autenticarUsuario(@Valid @RequestBody SolicitacaoLogin login) {
         Authentication authentication = authenticationManager.authenticate(
                 new UsernamePasswordAuthenticationToken(
-                        login.getCpf(),
+                        login.getCpf().replaceAll("\\D", ""),
                         login.getSenha()
                 )
         );
